@@ -1,0 +1,94 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --color-primary: 147 51 234;
+  --color-secondary: 79 70 229;
+  --color-accent: 236 72 153;
+  --color-background-light: 249 250 251;
+  --color-background-dark: 17 24 39;
+  --color-text-light: 31 41 55;
+  --color-text-dark: 243 244 246;
+}
+
+body {
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-700;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl mb-6;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl mb-4;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl mb-3;
+}
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded-full font-semibold transition-all duration-200 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-purple-600 text-white hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50;
+}
+
+/* Cards */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-shadow duration-200 hover:shadow-lg;
+}
+
+/* Form inputs */
+.input {
+  @apply w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 transition-all duration-200;
+}
+
+/* Gradients */
+.gradient-primary {
+  @apply bg-gradient-to-r from-purple-600 to-indigo-600;
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600;
+}
